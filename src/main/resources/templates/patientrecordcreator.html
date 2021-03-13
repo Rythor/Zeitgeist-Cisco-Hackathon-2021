@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmls:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="ISO-8859-1">
+  <title>Healthchain Patient Records Creator Page</title>
+	<link th:href = "@{/css/recordcreator.css}">
+</head>
+
+<body>
+
+  <div class="RecordCreationHeader">
+		<h1>Patient Record Creator</h1>
+	</div>
+
+  <div class="RecordsCreator">
+      <div class="PatientPersonalDetails">
+          <legend style="color: crimson; font-size:1.5em; font-weight: bold; text-align: center; margin: 0px 10px 0px 0px;">Patient Personal Details</legend>
+
+          <form action="#" th:action="@{/patientrecordform}" th:object="${command}">
+            <label for="patientFirstName">First Name</label>
+            <input type="text" th:field="*{textField}" id="patientFirstName" /><br/>
+            <label for="patientMiddleInitial">Middle Initial</label>
+            <input type="text" th:field="*{textField}" id="patientMiddleInitial" /><br/>
+            <label for="patientLastName">Last Name</label>
+            <input type="text" th:field="*{textField}" id="patientLastName" />
+          </form>
+      </div>
+  </div>
+</body>
+</html>

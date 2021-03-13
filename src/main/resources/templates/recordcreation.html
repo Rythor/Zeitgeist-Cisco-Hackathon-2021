@@ -3,20 +3,20 @@
 <head>
 	<meta charset="ISO-8859-1">
 	<title>Healthchain Record Creation Page</title>
-	<link th:href = "@{/css/recordcreation.css}">
-</head> 
+	<link th:href = "@{/css/recordcreator.css}">
+</head>
 
 <body>
 	<div class="RecordCreationHeader">
 		<h1>Records Creation Page</h1>
 	</div>
-	
+
 	<div class="RecordCreationSelector">
-		
+
 		<fieldset>
-			<legend style="color: crimson; font-size:1.5em; font-weight: bold; margin: 0px 10px 0px 0px;">Choose Record Type</legend>
-		
-			<form> 
+			<legend style="color: crimson; font-size:1.5em; font-weight: bold; text-align: center; margin: 0px 10px 0px 0px;">Choose Record Type</legend>
+
+			<form>
 				<input type="radio" id="patient" name="record" value="patient">
 				<label for="PatientButton">Patient</label>
 				<input type="radio" id="disease" name="record" value="disease">
@@ -27,5 +27,5 @@
 			</form>
 		</fieldset>
 	</div>
-</body> 
+</body>
 </html>
