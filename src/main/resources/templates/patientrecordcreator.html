@@ -40,7 +40,7 @@
 
       <div class="PatientDemographics">
           <fieldset>
-          <legend style="color: crimson; font-size:1.5em; font-weight: bold; text-align: center; margin: 0px 10px 0px 0px;">Demographics</legend>
+          <legend style="color: crimson; font-size:1.5em; font-weight: bold; text-align: center; margin: 0px 10px 0px 0px;">Patient Demographics</legend>
 
             <label for="patientAddressLine1">Address Line 1:</label>
             <input type="text" th:field="*{addressLine1}" id="patientAddressLine1" /><br/>
@@ -50,6 +50,20 @@
             <input type="text" th:field="*{cityAndCountry}" id="patientCityAndCountry" /><br/><br/>
            </fieldset>
       </div>
+
+      <div class="PatientReportAuthor">
+          <fieldset>
+          <legend style="color: crimson; font-size:1.5em; font-weight: bold; text-align: center; margin: 0px 10px 0px 0px;">Doctor Information</legend>
+
+            <label for="patientAddressLine1">First Name:</label>
+            <input type="text" th:field="*{addressLine1}" id="patientAddressLine1" /><br/>
+            <label for="patientAddressLine2">Middle Initial:</label>
+            <input type="text" th:field="*{addressLine2}" id="patientAddressLine2" />
+            <label for="patientCityAndCountry">City, (State), County:</label>
+            <input type="text" th:field="*{cityAndCountry}" id="patientCityAndCountry" /><br/><br/>
+           </fieldset>
+      </div>
+
       <button type="button" name="action" value="Cancel">Cancel</button>
       <input type="submit" value="Submit"/>
     </form>
