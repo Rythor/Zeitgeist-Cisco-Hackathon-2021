@@ -3,7 +3,7 @@
 <head>
   <meta charset="ISO-8859-1">
   <title>Healthchain Patient Records Creator Page</title>
-	<link th:href = "@{/css/recordcreator.css}">
+  <link th:href = "@{/css/recordcreator.css}">
 </head>
 
 <body>
@@ -12,11 +12,12 @@
 		<h1>Patient Record Creator</h1>
 	</div>
 
-  <div class="RecordsCreator">
+  <div class="RecordCreator">
       <div class="PatientPersonalDetails">
+		<fieldset>
           <legend style="color: crimson; font-size:1.5em; font-weight: bold; text-align: center; margin: 0px 10px 0px 0px;">Patient Personal Details</legend>
 
-          <form action="#" th:action="@{/patientrecordform}" th:object="${command}">
+          <form action="#" th:action="@{/patientrecordform}" th:object="${record}" method="post">
             <label for="patientFirstName">First Name</label>
             <input type="text" th:field="*{textField}" id="patientFirstName" /><br/>
             <label for="patientMiddleInitial">Middle Initial</label>
@@ -24,6 +25,7 @@
             <label for="patientLastName">Last Name</label>
             <input type="text" th:field="*{textField}" id="patientLastName" />
           </form>
+		</fieldset>
       </div>
   </div>
 </body>
