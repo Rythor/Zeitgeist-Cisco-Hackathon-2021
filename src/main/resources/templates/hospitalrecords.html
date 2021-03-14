@@ -2,13 +2,13 @@
 <html xmls:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="ISO-8859-1">
-	<title>Healthchain Disease Records Page</title>
-	<link th:href = "@{/css/recordviewer.css}">
+	<title>Healthchain Medicine Records Page</title>
+	<!-- <link th:href = "@{/css/recordviewer.css}"> -->
 </head>
 
 <body>
 	<div class="RecordsHeader">
-		<h1>Disease Records</h1>
+		<h1>Hospital Records</h1>
 	</div>
 
 	<div class="RecordsTable">
@@ -16,18 +16,17 @@
 			<thead>
 				<tr>
 					<th>Name</th>
-					<th>Symptoms</th>
-					<th>Diagnostitian ID</th>
-					<th>Date Diagnosed</th>
+					<th>Location</th>
+					<th></th>
+					<th></th>
 				</tr>
 			</thead>
 			<tbody>
-				<tr th:each="disease : ${}">
-					<td th:text=""></td>
+				<tr th:each="hospital : ${}">
+					<td th:text="">Name</td>
 				</tr>
 			</tbody>
 		</table>
 	</div>
-
 </body>
 </html>
