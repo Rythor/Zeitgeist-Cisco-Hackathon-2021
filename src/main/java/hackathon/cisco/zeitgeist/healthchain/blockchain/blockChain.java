@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-import com.google.gson.GsonBuilder;
+// import com.google.gson.GsonBuilder;
 
 
 
@@ -41,7 +41,9 @@ public class blockChain {
 		Block secondBlock = new Block(blockchain_stack.peek().hashCode(),one);
 		blockchain_stack.push(secondBlock);
 
-		String blockchainJson = new GsonBuilder().setPrettyPrinting().create().toJson(blockchain_stack);
+		// String blockchainJson = new GsonBuilder().setPrettyPrinting().create().toJson(blockchain_stack);
+		// System.out.println("\nThe block chain: ");
+		// System.out.println(blockchainJson);
 		
 		System.out.println(firstBlock.hashCode() + " " + firstBlock.getPreviousHash());
 		System.out.println(secondBlock.hashCode() + " " + secondBlock.getPreviousHash());
