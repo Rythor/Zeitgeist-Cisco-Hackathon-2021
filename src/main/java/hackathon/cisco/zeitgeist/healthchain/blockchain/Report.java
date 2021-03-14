@@ -7,13 +7,16 @@ public class Report implements GenericReport{
 	private String UserID; // Which user is inputting information
 	private Date CaseOpended;
 	private PatientInfo patientDetails;
-	private DiseaseInfo diseaseDetails;
+	private DiseaseInfo diseaseDetails; 
 	private hospitalInfo hospitalDetails;
 	
-	public Report(String UserID, Date CaseOpended)
+	public Report(String UserID, Date CaseOpended,PatientInfo patientDetails, DiseaseInfo diseaseDetails, hospitalInfo hospitalDetails)
 	{
 		this.UserID=UserID;
 		this.CaseOpended=CaseOpended;
+		this.patientDetails=patientDetails;
+		this.diseaseDetails=diseaseDetails;
+		this.hospitalDetails=hospitalDetails;
 	}
 	
 	public String getUserID()
