@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 package cisco_Project;
-=======
-package hackathon.cisco.zeitgeist.healthchain.blockchain;
-//package cisco_Project;
->>>>>>> ryan-blockchain
 
 import java.sql.Date;
 
