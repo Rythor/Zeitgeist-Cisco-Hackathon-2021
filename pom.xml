@@ -14,7 +14,7 @@
 	<name>healthchain</name>
 	<description>A healthcare blockchain for the 2021 Cisco Hackathon.</description>
 	<properties>
-		<java.version>15</java.version>
+		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -40,6 +40,27 @@
 			<artifactId>reactor-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+<dependency>
+ <groupId>org.webjars</groupId>
+ <artifactId>jquery</artifactId>
+ <version>2.1.1</version>
+ </dependency>
+ <dependency>
+ <groupId>org.webjars</groupId>
+ <artifactId>bootstrap</artifactId>
+ <version>3.2.0</version>
+ </dependency>
+ <dependency>
+ <groupId>org.webjars</groupId>
+ <artifactId>webjars-locator</artifactId>
+ <version>0.40</version>
+ </dependency>
+ <dependency>
+ <groupId>org.webjars</groupId>
+ <artifactId>font-awesome</artifactId>
+ <version>4.7.0</version>
+ </dependency>
 	</dependencies>
 
 	<build>
