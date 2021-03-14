@@ -13,23 +13,46 @@
 	</div>
 
   <div class="RecordCreator">
+    <form action="#" th:action="@{/patientrecordform}" th:object="${record}" method="post">
       <div class="PatientPersonalDetails">
-		<fieldset>
+		      <fieldset>
           <legend style="color: crimson; font-size:1.5em; font-weight: bold; text-align: center; margin: 0px 10px 0px 0px;">Patient Information</legend>
 
-          <form action="#" th:action="@{/patientrecordform}" th:object="${record}" method="post">
-            <label for="patientFirstName">First Name</label>
-            <input type="text" th:field="*{textField}" id="patientFirstName" /><br/>
-            <label for="patientMiddleInitial">Middle Initial</label>
-            <input type="text" th:field="*{textField}" id="patientMiddleInitial" /><br/>
-            <label for="patientLastName">Last Name</label>
-            <input type="text" th:field="*{textField}" id="patientLastName" />
-          </form>
+            <label for="patientFirstName">First Name:</label>
+            <input type="text" th:field="*{firstName}" id="patientFirstName" />
+            <label for="patientMiddleInitial">Middle Initial:</label>
+            <input type="text" th:field="*{middleInitial}" id="patientMiddleInitial" />
+            <label for="patientLastName">Last Name:</label>
+            <input type="text" th:field="*{lastName}" id="patientLastName" /><br/><br/>
 
-          <form action="#" >
-          </form>
-		</fieldset>
+            <label for="patientPhoneNumber">Phone Number:</label>
+            <input type="text" th:field="*{phoneNumber}" id="patientPhoneNumber" />
+            <label for="patientEmail">Email:</label>
+            <input type="text" th:field="*{email}" id="patientEmail" />
+            <br/>
+            <label for="patientGender">Gender:</label>
+            <input type="radio" th:field="*{isMale}" id="patientGenderMale">
+            <label for="patientIsMale">M</label>
+            <input type="radio" th:field="*{isFemale}" id="patientGenderFemale">
+            <label for="patientIsFemale">F</label>
+		       </fieldset>
       </div>
+
+      <div class="PatientDemographics">
+          <fieldset>
+          <legend style="color: crimson; font-size:1.5em; font-weight: bold; text-align: center; margin: 0px 10px 0px 0px;">Demographics</legend>
+
+            <label for="patientAddressLine1">Address Line 1:</label>
+            <input type="text" th:field="*{addressLine1}" id="patientAddressLine1" /><br/>
+            <label for="patientAddressLine2">Address Line 2:</label>
+            <input type="text" th:field="*{addressLine2}" id="patientAddressLine2" />
+            <label for="patientCityAndCountry">City, (State), County:</label>
+            <input type="text" th:field="*{cityAndCountry}" id="patientCityAndCountry" /><br/><br/>
+           </fieldset>
+      </div>
+      <button type="button" name="action" value="Cancel">Cancel</button>
+      <input type="submit" value="Submit"/>
+    </form>
   </div>
 </body>
 </html>
