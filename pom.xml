@@ -14,7 +14,7 @@
 	<name>healthchain</name>
 	<description>A healthcare blockchain for the 2021 Cisco Hackathon.</description>
 	<properties>
-		<java.version>15</java.version>
+		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
