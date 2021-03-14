@@ -5,17 +5,17 @@ import java.sql.Date;
 public class Report implements GenericReport{
 
 	private String UserID; // Which user is inputting information
-	private Date CaseOpended;
+	private long CaseOpended;
 	private PatientInfo patientDetails;
 	private DiseaseInfo diseaseDetails;
 	private hospitalInfo hospitalDetails;
 	
-	public Report(String UserID, Date CaseOpended)
+	public Report(String UserID, long CaseOpended)
 	{
-		this.UserID=UserID;
-		this.CaseOpended=CaseOpended;
+		this.UserID = UserID;
+		this.CaseOpended = CaseOpended;
 	}
-	
+
 	public String getUserID()
 	{
 		return UserID;
@@ -27,11 +27,11 @@ public class Report implements GenericReport{
 	@Override
 	public boolean equals(Object o)
 	{
-	 if(this==o) return true;
-	 if(o==null || getClass() !=o.getClass()) return false;
-	 Report that=(Report) o;
-	 if(UserID !=null ? !this.UserID.equals(that.UserID) : that.UserID!=null) return false;
-	 return CaseOpended != null ? this.CaseOpended.equals(that.CaseOpended) : that.CaseOpended == null;
+	 	if(this == o) return true;
+		if(o == null || getClass() !=o.getClass()) return false;
+		Report that = (Report) o;
+		if(UserID != null ? !this.UserID.equals(that.UserID) : that.UserID != null) return false;
+		return CaseOpended != null ? this.CaseOpended.equals(that.CaseOpended) : that.CaseOpended == null;
 	}
 	@Override
     public int hashCode() {
