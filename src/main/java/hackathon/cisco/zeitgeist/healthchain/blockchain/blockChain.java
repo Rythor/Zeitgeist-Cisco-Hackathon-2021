@@ -1,14 +1,18 @@
 package hackathon.cisco.zeitgeist.healthchain.blockchain;
 // package cisco_Project;
 
-import java.util.ArrayList;
 import java.sql.Date;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Stack;
+
+// import com.google.gson.GsonBuilder;
+
 
 
 public class blockChain {
-	
-	public static Stack<Block> s = new Stack<Block>();
+
+	public static Stack<Block> blockchain_stack = new Stack<Block>();
 
 	public static void main(String[] args)
 	{
@@ -32,12 +36,17 @@ public class blockChain {
 		 */
 		
 		Block firstBlock = new Block(0,one);
-		s.push(firstBlock);
+		blockchain_stack.push(firstBlock);
 
-		Block SecondBlock = new Block(s.peek().hashCode(),one);
+		Block secondBlock = new Block(blockchain_stack.peek().hashCode(),one);
+		blockchain_stack.push(secondBlock);
+
+		// String blockchainJson = new GsonBuilder().setPrettyPrinting().create().toJson(blockchain_stack);
+		// System.out.println("\nThe block chain: ");
+		// System.out.println(blockchainJson);
 		
 		System.out.println(firstBlock.hashCode() + " " + firstBlock.getPreviousHash());
-		System.out.println(SecondBlock.hashCode() + " " + SecondBlock.getPreviousHash());
+		System.out.println(secondBlock.hashCode() + " " + secondBlock.getPreviousHash());
 	}
 
 }
