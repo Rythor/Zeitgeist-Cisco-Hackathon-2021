@@ -1,4 +1,5 @@
 package hackathon.cisco.zeitgeist.healthchain.blockchain;
+// package cisco_Project;
 
 import java.sql.Date;
 
@@ -8,7 +9,7 @@ public class Report implements GenericReport{
 	private Date CaseOpended;
 	private PatientInfo patientDetails;
 	private DiseaseInfo diseaseDetails; 
-	private hospitalInfo hospitalDetails;
+	private hospitalInfo hospitalDetails; 
 	
 	public Report(String UserID, Date CaseOpended,PatientInfo patientDetails, DiseaseInfo diseaseDetails, hospitalInfo hospitalDetails)
 	{
@@ -19,6 +20,11 @@ public class Report implements GenericReport{
 		this.hospitalDetails=hospitalDetails;
 	}
 	
+	public Report(String employeeID, Date dateAdmitted) {
+		this.UserID=UserID;
+		this.CaseOpended=CaseOpended;
+	}
+
 	public String getUserID()
 	{
 		return UserID;

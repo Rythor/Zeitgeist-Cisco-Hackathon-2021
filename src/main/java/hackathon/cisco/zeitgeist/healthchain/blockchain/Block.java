@@ -1,16 +1,29 @@
 package hackathon.cisco.zeitgeist.healthchain.blockchain;
+// package cisco_Project;
 
 import java.util.*;
 
 public class Block {
 private int	previousHash;
-private List<Report> PatientReport; // linked list
+private int blockHash;
+private List<Report> Report; 
 
 
- public Block(int previousHash,List<Report> PatientReport)
+ public Block(int previousHash,List<Report> Report)
  {
 	 this.previousHash=previousHash;
-	 this.PatientReport=PatientReport;
+	 this.Report=Report;
+	 
+	 //List<Report> contents= {Arrays.hashCode(Report),previousHash};
+	 this.blockHash=this.hashCode();
+ }
+ public int getHash()
+ {
+	 return blockHash;
+ }
+ public void setHash(int blockHash)
+ {
+	this.blockHash = blockHash; 
  }
  public int getPreviousHash()
  {
@@ -22,11 +35,11 @@ private List<Report> PatientReport; // linked list
  }
  public List<Report> getPatientReport()
  {
-	 return PatientReport;
+	 return Report;
  }
- public void setPatientReport(List<Report> PatientReport)
+ public void setPatientReport(List<Report> Report)
  {
-	 this.PatientReport=PatientReport;
+	 this.Report=Report;
  }
  @Override
  public boolean equals(Object o) {
@@ -36,13 +49,12 @@ private List<Report> PatientReport; // linked list
      Block block = (Block) o;
 
      if (previousHash != block.previousHash) return false;
-     return PatientReport != null ? PatientReport.equals(block.PatientReport) : block.PatientReport == null;
+     return Report != null ? Report.equals(block.Report) : block.Report == null;
  }
-// refernce
  @Override
  public int hashCode() {
      int result = previousHash;
-     result = 31 * result + (PatientReport != null ? PatientReport.hashCode() : 0);
+     result = 31 * result + (Report != null ? Report.hashCode() : 0);
      return result;
  }
 
