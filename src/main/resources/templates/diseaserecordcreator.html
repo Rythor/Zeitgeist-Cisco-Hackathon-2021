@@ -3,15 +3,45 @@
 <head>
   <meta charset="ISO-8859-1">
   <title>Healthchain Disease Records Creator Page</title>
+  <link th:href = "@{/css/recordcreator.css}">
 </head>
 
 <body>
-  <div class="RecordsCreator">
-    <div>
-      <fieldset>
-          <legend>
-      </fieldset>
-    </div>
+  <div class="RecordCreationHeader">
+ 		<h1>Disease Record Creator</h1>
+  </div>
+
+  <div class="RecordCreator">
+
+	<div class="LocationDetails">
+		<fieldset>
+          <legend style="color: crimson; font-size:1.5em; font-weight: bold; text-align: center; margin: 0px 10px 0px 0px;">Location Details</legend>
+
+          <form action="#" th:action="@{/diseaserecordform}" th:object="${report}" method="post">
+            <label for="hospitalOrLabName">Hospital/Lab Name</label>
+            <input type="text" th:field="*{textField}" id="hospitalOrLabName" /><br/>
+            <label for="cityTownOrVillageName">City/Town/Village</label>
+            <input type="text" th:field="*{textField}" id="cityTownOrVillagename" /><br/>
+            <label for="countryName">Country</label>
+            <input type="text" th:field="*{textField}" id="countryName" />
+          </form>
+		</fieldset>
+	</div>
+
+      <div class="DiseaseDetails">
+		<fieldset>
+          <legend style="color: crimson; font-size:1.5em; font-weight: bold; text-align: center; margin: 0px 10px 0px 0px;">Disease Details</legend>
+
+          <form action="#" th:action="@{/patientrecordform}" th:object="${command}">
+            <label for="patientFirstName">First Name</label>
+            <input type="text" th:field="*{textField}" id="patientFirstName" /><br/>
+            <label for="patientMiddleInitial">Middle Initial</label>
+            <input type="text" th:field="*{textField}" id="patientMiddleInitial" /><br/>
+            <label for="patientLastName">Last Name</label>
+            <input type="text" th:field="*{textField}" id="patientLastName" />
+          </form>
+		</fieldset>
+	</div> 
   </div>
 </body>
 </html>
