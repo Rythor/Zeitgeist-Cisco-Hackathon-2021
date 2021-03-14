@@ -21,8 +21,8 @@ public class Report implements GenericReport{
 	}
 	
 	public Report(String employeeID, Date dateAdmitted) {
-		this.UserID=UserID;
-		this.CaseOpended=CaseOpended;
+		this.UserID = UserID;
+		this.CaseOpended = CaseOpended;
 	}
 
 	public String getUserID()
