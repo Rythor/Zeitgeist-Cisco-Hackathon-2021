@@ -1,3 +1,7 @@
+body {
+	align-items: center;
+}
+
 .RecordCreationHeader {
 	font-family: "Lucia Console";
 	font-size: 1.0em;
@@ -20,10 +24,22 @@
 
 .RecordCreator div {
 	margin: 30px 0px;
+	width: 500px;
+	min-width: 200px;
+	clear: both;
+}
+
+.RecordCreator fieldset {
+	border-radius: 4px;
+}
+
+.RecordCreator input {
+	width: 100%;
+	clear: both;
 }
 
 .PatientPersonalDetails {
-	min-width: 100px; 
+	min-width: 100px;
 }
 
 .PatientDemographics input[type=text] {
@@ -31,5 +47,5 @@
 }
 
 input[type=submit] {
-	align-self: right;
+	float: right;
 }
