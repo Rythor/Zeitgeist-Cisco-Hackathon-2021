@@ -38,7 +38,7 @@ public class PatientsController {
 		PatientInfo p = new PatientInfo(patientName, patientAge, patientInfo, insuranceId);
 		List<Report> reports = new ArrayList<Report>();
 		Date date = new Date(2019,11,17);
-		Report r = new Report("Dr. Oscar MacDougall", date, p);
+		Report r = new Report("Dr. Oscar MacDougall", date, p, null, null);
 		reports.add(r);
 		Block newBlock = new Block(blockChain.s.peek().hashCode(), reports);
 		blockChain.s.push(newBlock);
