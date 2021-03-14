@@ -1,4 +1,5 @@
-package cisco_Project;
+package hackathon.cisco.zeitgeist.healthchain.blockchain;
+// package cisco_Project;
 
 import java.util.*;
 
@@ -15,6 +16,14 @@ private List<Report> Report;
 	 
 	 //List<Report> contents= {Arrays.hashCode(Report),previousHash};
 	 this.blockHash=this.hashCode();
+ }
+ public int getHash()
+ {
+	 return blockHash;
+ }
+ public void setHash(int blockHash)
+ {
+	this.blockHash = blockHash; 
  }
  public int getPreviousHash()
  {
