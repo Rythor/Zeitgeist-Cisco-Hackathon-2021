@@ -7,6 +7,8 @@ import java.util.*;
 
 
 public class blockChain {
+	
+	public static Stack<Block> s = new Stack<Block>();
 
 	public static void main(String[] args)
 	{
@@ -30,7 +32,6 @@ public class blockChain {
 		 */
 		
 		Block firstBlock = new Block(0,one);
-		Stack<Block> s = new Stack<Block>();
 		s.push(firstBlock);
 
 		Block SecondBlock = new Block(s.peek().hashCode(),one);
