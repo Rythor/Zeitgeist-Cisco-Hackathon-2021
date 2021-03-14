@@ -7,9 +7,15 @@ body {
   color: #f44336;
 }
 
-.ThreeButtonsSection button {
+.ButtonsSection {
+  margin: 5px 0px;
+}
+
+.ButtonsSection button {
 	margin: 10px 30px;
 	border-radius: 8px;
   background-color: #f44336;
   color: white;
+  padding: 15px 32px;
+  font-family: ;
 }

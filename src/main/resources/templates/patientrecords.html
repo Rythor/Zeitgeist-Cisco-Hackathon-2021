@@ -9,10 +9,26 @@
 <body>
 	<div class="RecordsHeader">
 		<h1>Patient Records</h1>
+	</div>
 
-		<table>
-				
+	<div class="RecordsTable">
+		<table id="records">
+			<thead>
+				<tr>
+					<th>Insurance ID</th>
+					<th>Name</th>
+					<th>Information</th>
+					<th>Age</th>
+					<th>Date Added</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="patient : ${}">
+					<td th:text="">Name</td>
+				</tr>
+		  </tbody>
 		</table>
 	</div>
+
 </body>
 </html>
