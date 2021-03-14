@@ -1,10 +1,20 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<title>Getting Started: Serving Web Content</title>
+	<title>Healthchain Home Page</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-</head> 
+	<link th:href="@{/css/index.css}"/>
+</head>
 <body>
-	<p>Get your greeting <a href="/greeting">here</a></p>
+	<div class="PageHeader">
+		<h1>HEALTHCHAIN</h1>
+		<h3>Because secureness is next to healthiness</h3>
+	</div>
+
+	<div class="ButtonsSection">
+		<button type="button" th:onclick="goToPatientsPage()">Patients</button>
+		<button type="button" th:onclick="goToDiseasesPage()">Diseases</button>
+		<button type="button" th:onclick="goToMedicinesPage()">Medicines</button>
+	</div>
 </body>
 </html>
