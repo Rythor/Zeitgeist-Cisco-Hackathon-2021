@@ -1,5 +1,5 @@
 .RecordCreationHeader {
-	font-family: "Lucia Console"; 
+	font-family: "Lucia Console";
 	font-size: 1.0em;
 	text-align: center;
 	min-width: 40px;
@@ -14,10 +14,18 @@
 }
 
 .RecordCreationSelector form {
-	text-align: center; 
+	text-align: center;
 	font-family: "Lucia Console";
 }
 
 .RecordCreator div {
-	margin: 30px 0px; 
+	margin: 30px 0px;
+}
+
+.PatientDemographics input[type=text] {
+	font-family: "Lucia Console";
+}
+
+input[type=submit] {
+	align-self: right;
 }
