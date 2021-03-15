@@ -13,7 +13,7 @@
 	</div>
 
   <div class="RecordCreator">
-    <form action="#" th:action="@{/patients/recordSubmitted}" th:object="${PatientInfo}" method="post">
+    <form action="#" th:action="|window.location.href='/patients/recordSubmitted'|" th:object="${PatientInfo}" method="post">
       <div class="PatientPersonalDetails">
 		      <fieldset>
           <legend style="color: crimson; font-size:1.5em; font-weight: bold; text-align: center; margin: 0px 10px 0px 0px;">Patient Information</legend>
@@ -34,8 +34,8 @@
       </div>
     </form>
     <br/>
-    <form th:action="@{/recordCancelled}" method="get">
-        <button type="submit" th:onlick="@{'/recordcancelled'}" name="cancel" value="Cancel">Cancel</button>
+    <form th:action="|window.location.href='/patients/recordCancelled'|" method="get">
+        <button type="submit" name="cancel" value="Cancel">Cancel</button>
     </form>
   </div>
 </body>

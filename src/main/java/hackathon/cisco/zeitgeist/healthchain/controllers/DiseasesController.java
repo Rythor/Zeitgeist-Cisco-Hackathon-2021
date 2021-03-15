@@ -18,18 +18,18 @@ import hackathon.cisco.zeitgeist.healthchain.blockchain.DiseaseInfo;
 @RequestMapping("/diseases")
 public class DiseasesController {
 	
-	@RequestMapping("/diseases/existing")
+	@RequestMapping("/existing")
 	public String goToExistingDiseasesPage() {
 		return "diseaserecords";
 	}
 	
 	
-	@RequestMapping("/diseases/create")
+	@RequestMapping("/create")
 	public String goToDiseaseCreatorPage() {
 		return "diseaserecordcreator"; 
 	}
 	
-	@RequestMapping("/diseases/recordSubmitted")
+	@RequestMapping("/recordSubmitted")
 	public String submitDiseaseRecord(
 			@RequestParam(value = "diseaseName", required = true) String diseaseName,
 			@RequestParam(value = "diseaseSymptoms", required = true) String diseaseSymptoms) {
@@ -44,7 +44,7 @@ public class DiseasesController {
 		return "recordcreated"; 
 	}
 	
-	@RequestMapping("/diseases/recordCancelled")
+	@RequestMapping("/recordCancelled")
 	public String cancelDiseaseRecord() {
 		return "recordcancelled"; 
 	}

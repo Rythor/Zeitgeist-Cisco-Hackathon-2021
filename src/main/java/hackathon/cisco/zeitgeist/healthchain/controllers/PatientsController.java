@@ -18,17 +18,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping("/patients")
 public class PatientsController {
 	
-	@RequestMapping("/patients/existing")
+	@RequestMapping("/existing")
 	public String goToExistingPatientsPage() {
-		return "Checking out records of existing patients";
+		return "patientrecords";
 	}
 	
-	@RequestMapping("/patients/create")
+	@RequestMapping("/create")
 	public String goToPatientCreatorPage() {
-		return "You can create patient records now."; 
+		return "patientrecordceator"; 
 	}
 	
-	@RequestMapping("/patients/recordSubmitted")
+	@RequestMapping("/recordSubmitted")
 	public String submitPatientRecord(
 			@RequestParam(value = "patientName", required = true) String patientName,
 			@RequestParam(value = "patientAge", required = true) String patientAge,
@@ -42,10 +42,10 @@ public class PatientsController {
 		reports.add(r);
 		Block newBlock = new Block(Blockchain.s.peek().hashCode(), reports);
 		Blockchain.s.push(newBlock);
-		return "New record created and put on the blockchain!"; 
+		return "recordcreated"; 
 	}
 	
-	@RequestMapping("/patients/recordCancelled")
+	@RequestMapping("/recordCancelled")
 	public String cancelPatientRecord() {
 		return "recordcancelled"; 
 	}
