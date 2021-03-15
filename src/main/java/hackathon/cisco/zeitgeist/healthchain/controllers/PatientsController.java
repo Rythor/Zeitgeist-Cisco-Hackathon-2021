@@ -13,6 +13,7 @@ import java.sql.Date;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @RequestMapping("/patients")
@@ -24,6 +25,7 @@ public class PatientsController {
 	}
 	
 	@RequestMapping("/create")
+	@ResponseBody
 	public String goToPatientCreatorPage() {
 		return "patientrecordceator"; 
 	}
