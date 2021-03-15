@@ -6,7 +6,7 @@ import java.sql.Date;
 import java.util.*;
 
 
-public class blockChain {
+public class Blockchain {
 	
 	public static Stack<Block> s = new Stack<Block>();
 
@@ -15,7 +15,7 @@ public class blockChain {
 		Date date = new Date(2019,11,17);
 		// https://www.livescience.com/first-case-coronavirus-found.html
 		PatientInfo p=new PatientInfo("patient zero","Gender,address","55","insurance");
-		hospitalInfo h=new hospitalInfo("Hubei Provincial Hospital","Wuhan");
+		HospitalInfo h=new HospitalInfo("Hubei Provincial Hospital","Wuhan");
 		DiseaseInfo d=new DiseaseInfo("Covid-19","Symptons");
 		
 		String UserID = "Dr. Zhang Jixian";

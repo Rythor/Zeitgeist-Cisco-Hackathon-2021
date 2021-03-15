@@ -1,7 +1,7 @@
 package hackathon.cisco.zeitgeist.healthchain.controllers;
 
 import hackathon.cisco.zeitgeist.healthchain.blockchain.Block;
-import hackathon.cisco.zeitgeist.healthchain.blockchain.blockChain; 
+import hackathon.cisco.zeitgeist.healthchain.blockchain.Blockchain; 
 import hackathon.cisco.zeitgeist.healthchain.blockchain.Report;
 import hackathon.cisco.zeitgeist.healthchain.blockchain.PatientInfo;
 
@@ -23,12 +23,12 @@ public class PatientsController {
 		return "Checking out records of existing patients";
 	}
 	
-	@RequestMapping("/patients/patientCreator")
+	@RequestMapping("/patients/create")
 	public String goToPatientCreatorPage() {
 		return "You can create patient records now."; 
 	}
 	
-	@RequestMapping("/patients/patientRecordSubmitted")
+	@RequestMapping("/patients/recordSubmitted")
 	public String submitPatientRecord(
 			@RequestParam(value = "patientName", required = true) String patientName,
 			@RequestParam(value = "patientAge", required = true) String patientAge,
@@ -40,9 +40,14 @@ public class PatientsController {
 		Date date = new Date(2019,11,17);
 		Report r = new Report("Dr. Oscar MacDougall", date, p, null, null);
 		reports.add(r);
-		Block newBlock = new Block(blockChain.s.peek().hashCode(), reports);
-		blockChain.s.push(newBlock);
+		Block newBlock = new Block(Blockchain.s.peek().hashCode(), reports);
+		Blockchain.s.push(newBlock);
 		return "New record created and put on the blockchain!"; 
+	}
+	
+	@RequestMapping("/patients/recordCancelled")
+	public String cancelPatientRecord() {
+		return "recordcancelled"; 
 	}
 
 }
