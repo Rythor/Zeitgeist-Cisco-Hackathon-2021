@@ -3,14 +3,14 @@ package hackathon.cisco.zeitgeist.healthchain.blockchain;
 
 import java.sql.Date;
 
-public class hospitalInfo extends Report{
+public class HospitalInfo extends Report{
 	private String HospitalName;
 	private String HospitalLocation;
 	private static String EmployeeID; // should match userID in report
 	private static Date dateAdmitted;
 	
 
-	public hospitalInfo(String HospitalName, String HospitalLocation) {
+	public HospitalInfo(String HospitalName, String HospitalLocation) {
 		// TODO Auto-generated constructor stub
 		super(EmployeeID,dateAdmitted);
 		this.HospitalName=HospitalName;

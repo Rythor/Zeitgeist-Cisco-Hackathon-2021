@@ -9,9 +9,9 @@ public class Report implements GenericReport{
 	private Date CaseOpended;
 	private PatientInfo patientDetails;
 	private DiseaseInfo diseaseDetails; 
-	private hospitalInfo hospitalDetails; 
+	private HospitalInfo hospitalDetails; 
 	
-	public Report(String UserID, Date CaseOpended,PatientInfo patientDetails, DiseaseInfo diseaseDetails, hospitalInfo hospitalDetails)
+	public Report(String UserID, Date CaseOpended,PatientInfo patientDetails, DiseaseInfo diseaseDetails, HospitalInfo hospitalDetails)
 	{
 		this.UserID=UserID;
 		this.CaseOpended=CaseOpended;
