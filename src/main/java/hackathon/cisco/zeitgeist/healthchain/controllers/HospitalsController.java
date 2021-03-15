@@ -1,9 +1,9 @@
-package hackathon.cisco.zeitgeist.healthchain.controller;
+package hackathon.cisco.zeitgeist.healthchain.controllers;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@Controller
 @RequestMapping("/hospitals")
 public class HospitalsController {
 	
