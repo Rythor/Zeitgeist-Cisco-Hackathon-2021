@@ -3,6 +3,7 @@ package hackathon.cisco.zeitgeist.healthchain.controllers;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,17 +19,18 @@ import hackathon.cisco.zeitgeist.healthchain.blockchain.HospitalInfo;
 @RequestMapping("/hospitals")
 public class HospitalsController {
 	
-	@RequestMapping("/hospitals/existing")
+	@RequestMapping("/existing")
 	public String goToExistingHospitalsPage() {
-		return "Checking out records of existing hospitals"; 
+		return "hospitalrecords"; 
 	}
 	
-	@RequestMapping("/hospitals/hospitalCreator")
+	@RequestMapping("/create")
+	@ResponseBody
 	public String goToHospitalCreatorPage() {
-		return "You can now create records of new hospitals"; 
+		return "hospitalrecordcreator"; 
 	}
 	
-	@RequestMapping("/hospitals/recordSubmitted")
+	@RequestMapping("/recordSubmitted")
 	public String submitHospitalRecord(
 			@RequestParam(value = "hospitalName", required = true) String hospitalName,
 			@RequestParam(value = "hospitalLocation", required = true) String hospitalLocation) {
@@ -43,7 +45,7 @@ public class HospitalsController {
 		return "recordcreated"; 
 	}
 	
-	@RequestMapping("/hospitals/recordCancelled")
+	@RequestMapping("/recordCancelled")
 	public String cancelHospitalRecord() {
 		return "recordcancelled"; 
 	}

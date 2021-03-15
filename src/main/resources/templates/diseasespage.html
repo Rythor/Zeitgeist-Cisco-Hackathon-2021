@@ -11,8 +11,8 @@
 	</div>
 
 	<div class="ButtonsSection">
-		<button type="button" th:onclick="goToExistingDiseasesPage()">Existing</button>
-		<button type="button" th:onclick="goToDiseasesCreatorPage()">New</button>
+		<button type="button" th:onclick="|window.location.href='/diseases/existing'|">Existing</button>
+		<button type="button" th:onclick="|window.location.href='/diseases/create'|">New</button>
 	</div>
 </body>
 </html>

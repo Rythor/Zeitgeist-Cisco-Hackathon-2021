@@ -12,9 +12,9 @@
 	</div>
 
 	<div class="ButtonsSection">
-		<button type="button" th:onclick="goToPatientsPage()">Patients</button>
-		<button type="button" th:onclick="goToDiseasesPage()">Diseases</button>
-		<button type="button" th:onclick="goToHospitalsPage()">Hospitals</button>
+		<button type="button" th:onclick="|window.location.href='/patients'|">Patients</button>
+		<button type="button" th:onclick="|window.location.href='/diseases'|">Diseases</button>
+		<button type="button" th:onclick="|window.location.href='/hospitals'|">Hospitals</button>
 	</div>
 </body>
 </html>
