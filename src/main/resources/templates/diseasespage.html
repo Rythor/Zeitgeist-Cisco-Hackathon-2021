@@ -4,6 +4,9 @@
 	<title>Healthchain Diseases Main Page</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link th:href="@{/css/index.css}"/>
+	<script src="http://maps.google.com/maps?file=api&v=1&key=AIzaSyC5kZUpghzaI40k5JixW2cSHI3mrYv1NTM"
+		type="text/javascript">
+	</script>
 </head>
 <body>
 	<div class="PageHeader">
@@ -14,5 +17,15 @@
 		<button type="button" th:onclick="|window.location.href='/diseases/existing'|">Existing</button>
 		<button type="button" th:onclick="|window.location.href='/diseases/create'|">New</button>
 	</div>
+	
+	<div id="map" style="width: 400px; height: 300px"></div> 
+	
+	<script type="text/javascript">
+		
+		var map = new GMap(document.getElementById("map"));
+		
+		map.centerAndZoom(new GPoint(-83.022206, 39.998264), 3); 
+		
+	</script>
 </body>
 </html>
